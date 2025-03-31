@@ -17,7 +17,7 @@ scale = Vector2(1.125, 1)
 texture = ExtResource("1_vr0dr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 0)
+position = Vector2(-3, 0)
 rotation = -1.56722
 shape = SubResource("CapsuleShape2D_vr0dr")
 debug_color = Color(0.765789, 0.340619, 0.743636, 0.42)
