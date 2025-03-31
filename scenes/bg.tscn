@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmorqdx2n1sqs"]
+
+[ext_resource type="Texture2D" uid="uid://dhcmdk7riew6a" path="res://Asset/3200146.jpg" id="1_anprf"]
+[ext_resource type="Script" uid="uid://b8fejs15e4r46" path="res://scripts/bg.gd" id="1_dpp0m"]
+
+[sub_resource type="Environment" id="Environment_dpp0m"]
+background_mode = 3
+background_energy_multiplier = 1.5
+ambient_light_color = Color(0.211765, 0.211765, 0.211765, 0.823529)
+glow_enabled = true
+glow_intensity = 4.84
+glow_bloom = 0.2
+glow_hdr_scale = 2.03
+glow_hdr_luminance_cap = 55.77
+
+[node name="BG" type="ParallaxBackground"]
+script = ExtResource("1_dpp0m")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_dpp0m")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+modulate = Color(0.418279, 0.418279, 0.418279, 1)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_anprf")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 2985, 1989)

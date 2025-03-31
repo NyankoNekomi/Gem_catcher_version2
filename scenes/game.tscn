@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://oyva8poi4pjl"]
+
+[ext_resource type="Script" uid="uid://cgxyqekrxyp5b" path="res://scripts/game.gd" id="1_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://76xcxwhabgs3" path="res://scenes/ui.tscn" id="2_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://dmorqdx2n1sqs" path="res://scenes/bg.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://x7qckmnpw14f" path="res://scenes/paddle_scene.tscn" id="3_lnu2h"]
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_lbhrr")
+
+[node name="UI" parent="." instance=ExtResource("2_lbhrr")]
+offset_left = 2.0
+offset_right = 1157.0
+offset_bottom = 647.0
+
+[node name="BG" parent="." instance=ExtResource("2_yqjtg")]
+
+[node name="SpawnGems" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="paddleScene" parent="." instance=ExtResource("3_lnu2h")]
+position = Vector2(524, 570)
+
+[connection signal="score_change" from="." to="UI" method="_on_game_score_change"]
+[connection signal="timeout" from="SpawnGems" to="." method="_on_spawn_gems_timeout"]
+[connection signal="area_entered" from="paddleScene" to="." method="_on_paddle_area_entered"]
