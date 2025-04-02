@@ -21,6 +21,10 @@ boot_splash/minimum_display_time=3000
 
 AudioSteam="*res://scenes/audio_steam.tscn"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [input]
 
 move_left={
