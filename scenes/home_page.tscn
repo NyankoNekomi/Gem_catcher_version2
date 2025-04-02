@@ -1,0 +1,281 @@
+[gd_scene load_steps=47 format=3 uid="uid://c13yb5l7frhjt"]
+
+[ext_resource type="PackedScene" uid="uid://dmorqdx2n1sqs" path="res://scenes/bg.tscn" id="1_2e0ks"]
+[ext_resource type="Script" uid="uid://phluwo4yomvh" path="res://scripts/home_page.gd" id="1_caq2i"]
+[ext_resource type="FontFile" uid="uid://dllialilg0qel" path="res://Asset/fonts/Kenney Mini Square Mono.ttf" id="2_faivq"]
+[ext_resource type="PackedScene" uid="uid://oyva8poi4pjl" path="res://scenes/game.tscn" id="2_fp8bb"]
+[ext_resource type="FontFile" uid="uid://bpvo8qq75vqp2" path="res://Asset/fonts/Kenney Mini Square.ttf" id="3_caq2i"]
+[ext_resource type="Texture2D" uid="uid://crt0ljsxh6ql2" path="res://Asset/gem sprites/Asset 10@3x-8.png" id="6_0a5pl"]
+[ext_resource type="Texture2D" uid="uid://b8mlbgofmx7pe" path="res://Asset/gem sprites/Asset 7@3x-8.png" id="6_6ec7v"]
+[ext_resource type="Texture2D" uid="uid://dqup0lbjpw68u" path="res://Asset/button asset/arrow_left_light.png" id="6_8v2tv"]
+[ext_resource type="Texture2D" uid="uid://bavb7hlxjvtyc" path="res://Asset/button asset/arrow_right_light.png" id="7_0a5pl"]
+[ext_resource type="Texture2D" uid="uid://c2q7ckxsd175p" path="res://Asset/gem sprites/Asset 5@3x-8.png" id="7_xt8b2"]
+[ext_resource type="Texture2D" uid="uid://beba1cnfr5gbt" path="res://Asset/button asset/a_key_light.png" id="8_uggd4"]
+[ext_resource type="Texture2D" uid="uid://dkrnnfqet34le" path="res://Asset/button asset/d_light.png" id="9_6ec7v"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6ec7v"]
+font = ExtResource("2_faivq")
+font_size = 100
+font_color = Color(1, 0.470588, 0.658824, 1)
+outline_size = 5
+outline_color = Color(0.14902, 0.164706, 1, 1)
+shadow_size = 10
+shadow_color = Color(0, 10.698, 14.629, 0.356)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fp8bb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0iwd0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_emafi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vobnt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8v2tv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0a5pl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uggd4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6ec7v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xt8b2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u02fq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5jnje"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0uxq6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gvqci"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c6dk5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mlk2l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xdpot"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6etmq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6vrv6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0hdp0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oh4ns"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jfyqe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wwtyc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bjyea"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6q0bc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rsfpc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qh7ul"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_chjn3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_taumg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_em7oa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5wms7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yboc7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l866q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c2tqg"]
+
+[node name="Home page" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 19.0
+offset_right = 4.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_caq2i")
+next_scene = ExtResource("2_fp8bb")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -196.0
+offset_right = 450.0
+offset_bottom = -71.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "GEM CATCHER"
+label_settings = SubResource("LabelSettings_6ec7v")
+
+[node name="BG" parent="." instance=ExtResource("1_2e0ks")]
+
+[node name="Menu_buttons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -141.0
+offset_top = -34.0
+offset_right = 174.0
+offset_bottom = 237.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Start" type="Button" parent="Menu_buttons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_faivq")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fp8bb")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_0iwd0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_emafi")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_vobnt")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_8v2tv")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_0a5pl")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_uggd4")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_6ec7v")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xt8b2")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_u02fq")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5jnje")
+text = "START
+"
+
+[node name="Instructions" type="Button" parent="Menu_buttons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_faivq")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0uxq6")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_gvqci")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_c6dk5")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_mlk2l")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_xdpot")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_6etmq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6vrv6")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_0hdp0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_oh4ns")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_jfyqe")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wwtyc")
+text = "INSTRUCTIONS"
+
+[node name="Quit" type="Button" parent="Menu_buttons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_caq2i")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bjyea")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_6q0bc")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rsfpc")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_qh7ul")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_chjn3")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_taumg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_em7oa")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_5wms7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yboc7")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_l866q")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_c2tqg")
+text = "QUIT"
+
+[node name="Instructions" type="Control" parent="."]
+visible = false
+z_index = 2
+anchors_preset = 0
+offset_left = 374.0
+offset_top = 192.0
+offset_right = 842.0
+offset_bottom = 535.0
+
+[node name="instructions" type="ColorRect" parent="Instructions"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -239.0
+offset_top = -191.5
+offset_right = 226.0
+offset_bottom = 181.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0.282353, 1)
+
+[node name="Asset7_3x-8" type="Sprite2D" parent="Instructions/instructions"]
+position = Vector2(325, 320)
+scale = Vector2(0.243966, 0.205844)
+texture = ExtResource("6_6ec7v")
+
+[node name="Asset5_3x-8" type="Sprite2D" parent="Instructions/instructions"]
+position = Vector2(103.575, 314.475)
+scale = Vector2(0.162994, 0.15728)
+texture = ExtResource("7_xt8b2")
+
+[node name="Asset10_3x-8" type="Sprite2D" parent="Instructions/instructions"]
+position = Vector2(217, 309)
+scale = Vector2(0.177291, 0.1947)
+texture = ExtResource("6_0a5pl")
+
+[node name="ArrowLeftLight" type="Sprite2D" parent="Instructions/instructions"]
+position = Vector2(157, 157)
+texture = ExtResource("6_8v2tv")
+
+[node name="ArrowRightLight" type="Sprite2D" parent="Instructions/instructions"]
+position = Vector2(208, 158)
+texture = ExtResource("7_0a5pl")
+
+[node name="DLight" type="Sprite2D" parent="Instructions/instructions"]
+position = Vector2(303, 158)
+texture = ExtResource("9_6ec7v")
+
+[node name="AKeyLight" type="Sprite2D" parent="Instructions/instructions"]
+position = Vector2(257, 157)
+texture = ExtResource("8_uggd4")
+
+[node name="close" type="Button" parent="Instructions/instructions"]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 15.0
+offset_right = 444.0
+offset_bottom = 44.0
+theme_override_constants/align_to_largest_stylebox = -1
+theme_override_fonts/font = ExtResource("3_caq2i")
+text = "X"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Instructions/instructions"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 59.0
+offset_right = 448.0
+offset_bottom = 116.0
+theme_override_fonts/normal_font = ExtResource("3_caq2i")
+theme_override_font_sizes/normal_font_size = 20
+text = "Press the button on the keyboard to move the paddle 
+"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Instructions/instructions"]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 231.0
+offset_right = 431.0
+offset_bottom = 285.0
+theme_override_fonts/normal_font = ExtResource("3_caq2i")
+theme_override_font_sizes/normal_font_size = 20
+text = "Catch the gem and score points
+
+"
+
+[connection signal="pressed" from="Menu_buttons/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Menu_buttons/Instructions" to="." method="_on_instructions_pressed"]
+[connection signal="pressed" from="Menu_buttons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Instructions/instructions/close" to="." method="_on_close_pressed"]

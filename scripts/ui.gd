@@ -1,16 +1,16 @@
 extends Control
 
-@onready var lives: HBoxContainer = $MarginContainer/Lives
+@onready var lives: HBoxContainer = $MarginContainer/VBoxContainer/Lives
+
 @onready var score_label: Label = $MarginContainer/SCORE  # Renamed to avoid conflict
+@onready var back: Button = $MarginContainer/VBoxContainer/Back
 
-
+var home_screen = "res://scenes/home_page.tscn"
 
 var _hearts: Array
 
 func _ready() -> void:
 	_hearts = lives.get_children()
-	var game_instance = get_tree().get_root().get_child(0)
-	game_instance.lives_reduced.connect(_on_life_reduced)
 
 func on_score_updated(new_score: int) -> void:  # Renamed parameter
 	score_label.text = "%04d" % new_score  # Use the renamed variable
@@ -28,7 +28,7 @@ func _ui_heart_reduction(_lives: int):
 
 func blink_heart(heart: Control):
 	var blink_duration: float = 0.1
-	var blink_count: int = 1
+	var blink_count: int = 2
 	for i in range(blink_count):
 		# Set the heart to invisible
 		heart.modulate.a = 0.0
@@ -41,5 +41,11 @@ func blink_heart(heart: Control):
 func _on_game_score_change(new_score: int) -> void:
 	on_score_updated(new_score)
 	
-func _on_life_reduced(_lives:int):
-	_ui_heart_reduction(_lives)
+
+
+func _on_game_lives_reduced(new_lives: int) -> void:
+	_ui_heart_reduction(new_lives)
+
+
+func _on_back_pressed() -> void:
+	get_tree().change_scene_to_file(home_screen)

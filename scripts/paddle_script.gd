@@ -11,3 +11,9 @@ func _process(delta: float) -> void:
 		position.x += SPEED * delta 
 		
 	position.x = clampf(position.x, get_viewport_rect().position.x, get_viewport_rect().end.x)
+
+
+
+
+func _on_area_entered(area: Area2D) -> void:
+	AudioSteam.play_clip("spell",true)

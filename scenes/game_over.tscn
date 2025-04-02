@@ -1,0 +1,126 @@
+[gd_scene load_steps=16 format=3 uid="uid://dfe4xcie12gd"]
+
+[ext_resource type="Script" uid="uid://b6ewee8rohc34" path="res://scripts/game_over.gd" id="1_wqhvx"]
+[ext_resource type="FontFile" uid="uid://dllialilg0qel" path="res://Asset/fonts/Kenney Mini Square Mono.ttf" id="1_xeevv"]
+[ext_resource type="FontFile" uid="uid://bpvo8qq75vqp2" path="res://Asset/fonts/Kenney Mini Square.ttf" id="3_tbwuq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wqhvx"]
+font = ExtResource("1_xeevv")
+font_size = 100
+font_color = Color(0.487035, 0.751532, 1, 1)
+outline_size = 5
+outline_color = Color(0.694309, 8.32662e-06, 0.460378, 1)
+shadow_size = 10
+shadow_color = Color(0, 10.698, 14.629, 0.356)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_racf3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7m3ot"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v3hpu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_irg28"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2jtsn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8bugq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wawo4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_56v3a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o57t2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uq3qu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0p6qk"]
+
+[node name="GAME_OVER" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wqhvx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.124449, 0.124449, 0.124449, 0.98)
+
+[node name="Gameover" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -342.0
+offset_top = -156.0
+offset_right = 483.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Game OVER"
+label_settings = SubResource("LabelSettings_wqhvx")
+
+[node name="replay" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.0
+offset_top = -15.5
+offset_right = 33.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_tbwuq")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_racf3")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_7m3ot")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_v3hpu")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_irg28")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_2jtsn")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_8bugq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wawo4")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_56v3a")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_o57t2")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_uq3qu")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0p6qk")
+text = "REPLAY"
+
+[node name="quit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.0
+offset_top = 33.0
+offset_right = 29.0
+offset_bottom = 77.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_tbwuq")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_racf3")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_7m3ot")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_v3hpu")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_irg28")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_2jtsn")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_8bugq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wawo4")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_56v3a")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_o57t2")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_uq3qu")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0p6qk")
+text = "QUIT"

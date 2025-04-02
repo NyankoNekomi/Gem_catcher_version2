@@ -2,6 +2,7 @@ extends Node2D
 
 class_name Game
 @onready var paddle: Area2D = $paddleScene
+@onready var game_over: Control = $GAME_OVER
 
 @onready var spawn_gems: Timer = $SpawnGems
 const GEM = preload("res://scenes/gem.tscn")
@@ -19,6 +20,7 @@ static func get_vpr() -> Rect2:
 	return _vp_r
 
 func _ready() -> void:
+	game_over.visible=false
 	update_vp()
 	get_viewport().size_changed.connect(update_vp)
 	spawn_gems.start()  # Start the timer to spawn gems
@@ -44,9 +46,10 @@ func _on_spawn_gems_timeout() -> void:
 	spawn_gems.wait_time = randf_range(1,3)
 #
 func stop_all() -> void:
-	#sound.stop()
-	#sound.stream = EXPLODE
-	#sound.play()
+	AudioSteam.play_clip("explode")
+	game_over.visible = true
+	
+	AudioSteam.bgm_node.autoplay = false
 	spawn_gems.stop()
 	paddle.set_process(false)
 	for child in get_children():
@@ -76,3 +79,11 @@ func reduce_life():
 	if _lives < 0:
 		stop_all()
 	
+
+
+func _on_replay_pressed() -> void:
+	get_tree().reload_current_scene()
+
+
+func _on_quit_pressed() -> void:
+	get_tree().quit()

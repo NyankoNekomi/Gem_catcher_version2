@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsh0csoikxnel"]
+
+[ext_resource type="AudioStream" uid="uid://bbsqplnn8p1tk" path="res://Asset/bgm_action_5.mp3" id="1_c11qs"]
+[ext_resource type="Script" uid="uid://bni55m8rubxeh" path="res://scenes/audio_steam.gd" id="1_f8x7r"]
+
+[node name="AudioSteam" type="Node"]
+script = ExtResource("1_f8x7r")
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_c11qs")
+volume_db = -5.0
+autoplay = true
+
+[node name="sfx" type="AudioStreamPlayer2D" parent="."]
