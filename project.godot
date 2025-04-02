@@ -11,9 +11,11 @@ config_version=5
 [application]
 
 config/name="Demo1"
-run/main_scene="res://scenes/game.tscn"
+run/main_scene="uid://c13yb5l7frhjt"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/image="uid://boscvw3cm7rlq"
+config/icon="res://Asset/icon.svg"
+boot_splash/minimum_display_time=3000
 
 [autoload]
 
